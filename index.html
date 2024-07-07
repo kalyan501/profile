@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        .section p, .section ul {
+            padding: 10px;
+            margin: 0;
+        }
+        .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .password-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .password-box {
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .password-box input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container" id="password-container">
+        <div class="password-box">
+            <h2>Enter Password</h2>
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p id="error-message" style="color: red; display: none;">Incorrect Password</p>
+        </div>
+    </div>
+
+    <div class="container" id="resume-container" style="display: none;">
+        <header>
+            <h1>VALLABHUNI TULASI NAGA KALYAN</h1>
+            <p>Email: tulasinagakalyan@gmail.com | Mobile: +91 8555853179 | Place: Mangalagiri</p>
+        </header>
+        <div class="section">
+            <h2>Career Objective</h2>
+            <p>Self-motivated and hardworking fresher seeking an opportunity to work in a challenging environment to demonstrate my skills and utilize my knowledge for the growth of the organization.</p>
+        </div>
+        <div class="section">
+            <h2>Educational Qualifications</h2>
+            <ul>
+                <li><strong>B. Tech</strong>, Lakireddy Bali Reddy College of Engineering, JNTU - Kakinada, 2025, 91%</li>
+                <li><strong>Intermediate</strong>, Sri Chaitanya Junior College, 2021, 90%</li>
+                <li><strong>SSC</strong>, Sri Chaitanya Techno School, 2019, 95%</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Website Designed</h2>
+            <ul>
+                <li>All Semester Subjects [Prospective for Mobile, Laptop, Tablet, etc.] - <a href="https://magicalworldlbrce.blogspot.com/">https://magicalworldlbrce.blogspot.com/</a></li>
+                <li>My complete profile - <a href="https://kalyan501.github.io/Profile/">https://kalyan501.github.io/Profile/</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Projects Done</h2>
+            <ul>
+                <li>Remove Noise Signal from audio using Filters with MATLAB</li>
+                <li>Audio Analyzer using Filters concept with LabVIEW Software</li>
+                <li>Rat Race Coupler using HFSS software</li>
+                <li>Community Service Project on AUTOMATIC STREET LIGHTS USING ARDUINO SOLAR PANEL AND RECHARGEABLE BATTERY</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Internships</h2>
+            <ul>
+                <li>CISCO – Cyber Security Internship in Cisco – AICTE [online]</li>
+                <li>Internship on Python-Pantech Solutions PVT LTD [online]</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Certificates</h2>
+            <ul>
+                <li>Hands on Workshop on Embedded System</li>
+                <li>Workshop on PCB Design Organized by Reconfigurable Computing Club</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Much Familiar with Python</li>
+                <li>Much Familiar in Front End Design</li>
+                <li>Good Logic building in Programming Languages – C, Python and Java</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Learning new things</li>
+                <li>Playing KABADDI</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Declaration</h2>
+            <p>I hereby declare that the above information is true to the best of my knowledge.</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = '123456'; // Set the correct password
+            if (password === correctPassword) {
+                document.getElementById('password-container').style.display = 'none';
+                document.getElementById('resume-container').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
