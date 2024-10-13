@@ -236,6 +236,26 @@
                 document.getElementById('error-message').style.display = 'block';
             }
         }
+
+        // Disable developer tools opening
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && (event.key === 'i' || event.key === 'I' || event.key === 'c' || event.key === 'C' || event.key === 'u' || event.key === 'U')) {
+                event.preventDefault();
+                alert("Developer tools are disabled.");
+                window.location.href = "about:blank"; // Redirect to a blank page
+            }
+        });
+
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            alert("Right-click is disabled.");
+        });
+
+        // Additional attempt to block developer tools
+        window.addEventListener('blur', function () {
+            window.location.href = "about:blank"; // Redirect to a blank page
+        });
+
     </script>
 </body>
 
